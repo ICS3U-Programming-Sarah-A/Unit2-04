@@ -8,16 +8,16 @@ import constants
 
 
 def main():
-    # input
+    # get user input, diameter
     diameter = int(input("Enter the diameter of the pizza (inches): "))
 
-    # process
+    # calculate subtotal, tax, and total cost
     subtotal = constants.LABOUR_COST + constants.RENTAL_COST + \
         constants.INGRED_COST * diameter
     tax = constants.HST * subtotal
     total = subtotal + tax
 
-    # output
+    # display results to user, total cost
     print("")
     print("The total cost is = ${:,.2f}".format(total))
 
